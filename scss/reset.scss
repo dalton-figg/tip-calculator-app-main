@@ -1,1 +1,49 @@
 @import "../scss/helpers/base";
+
+* {
+  box-sizing: border-box;
+  font-weight: weight(bold);
+  margin: 0;
+}
+
+html {
+  font-family: $font-primary;
+  scroll-behavior: smooth;
+  text-align: center;
+  @include fontSmooth(antialiased, grayscale);
+}
+
+body {
+  background: $clr-primary-700;
+  color: $clr-primary-400;
+}
+
+h1 {
+  letter-spacing: toRem(10);
+  text-transform: uppercase;
+}
+
+h2 {
+  @extend %heading;
+}
+
+img {
+  display: block;
+  font: italic;
+  height: auto;
+  max-width: 100%;
+}
+
+button {
+  @extend %button;
+}
+
+label {
+  @include sr-only;
+}
+
+input {
+  color: $clr-primary-400;
+  @include appearance-reset;
+  @extend %input;
+}

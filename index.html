@@ -1,36 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Meta + SEO -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/index.css">
-  <title>Frontend Mentor | Tip Calculator App</title>
-</head>
-<body>
+    <title>Frontend Mentor | Tip Calculator App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  Bill
+    <!-- Favicon -->
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  Number of People
+    <!-- Google Fonts -->
 
-  Tip Amount
-  / person
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-  Total
-  / person
+    <!-- Global Styles + Resets -->
 
-  Reset
-  
-</body>
+    <link rel="stylesheet" href="css/reset.css" />
+
+    <!-- Page Styles -->
+
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Splitter</h1>
+      <section>
+        <div class="calculator">
+          <div class="calculator__input">
+            <h2>Bill</h2>
+            <label for="bill">Bill</label>
+            <input type="number" name="bill" id="bill" placeholder="0" />
+            <h2>Select Tip %</h2>
+            <div class="calculator__tip-selections">
+              <button class="calculator__tip-selection">5%</button>
+              <button class="calculator__tip-selection">10%</button>
+              <button class="calculator__tip-selection">15%</button>
+              <button class="calculator__tip-selection">25%</button>
+              <button class="calculator__tip-selection">50%</button>
+              <button class="calculator__tip-selection">Custom</button>
+            </div>
+            <h2>Number of People</h2>
+            <label for="people">Number of People</label>
+            <input type="number" name="people" id="people" placeholder="1" />
+          </div>
+          <div class="calculator__results">
+            <div>
+              <div class="calculator__result">
+                <div>
+                  <h2>Tip Amount</h2>
+                  <p>/ per person</p>
+                </div>
+                <p class="calculator__total">$0.00</p>
+              </div>
+              <div class="calculator__result">
+                <div>
+                  <h2>Total</h2>
+                  <p>/ per person</p>
+                </div>
+                <p class="calculator__total">$0.00</p>
+              </div>
+            </div>
+
+            <button class="calculator__reset">Reset</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

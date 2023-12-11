@@ -1,0 +1,25 @@
+%button {
+  background-color: $clr-primary-300;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: toRem(24);
+  height: 58px;
+  text-align: center;
+  @include appearance-reset;
+  @include maxWidth(147px);
+}
+
+%input {
+  background: $clr-primary-800;
+  border-radius: toRem(10);
+  font-size: toRem(24);
+  height: 70px;
+  padding: toRem(16);
+  text-align: right;
+  @include maxWidth(474px);
+}
+
+%heading {
+  font-size: toRem(20);
+}

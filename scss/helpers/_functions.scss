@@ -1,1 +1,15 @@
+@use "sass:map";
 
+$weights: (
+  "light": 300,
+  "regular": 400,
+  "bold": 700,
+);
+
+@function weight($weight) {
+  @return map.get($weights, $weight);
+}
+
+@function toRem($px, $base: 16) {
+  @return calc($px / $base) * 1rem;
+}

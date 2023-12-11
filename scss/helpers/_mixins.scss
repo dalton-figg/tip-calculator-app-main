@@ -1,0 +1,61 @@
+@mixin maxWidth($width) {
+  max-width: $width;
+  width: 100%;
+}
+
+@mixin sr-only {
+  border-width: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@mixin appearance-reset {
+  appearance: none;
+  border: none;
+  outline: none;
+  // --
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &:focus,
+  &:hover {
+    border: none;
+    outline: none;
+  }
+}
+
+@mixin layout(
+  $display: null,
+  $justify: null,
+  $align: null,
+  $wrap: null,
+  $direction: null,
+  $flex: null
+) {
+  align-items: $align;
+  display: $display;
+  justify-content: $justify;
+  $flex: $flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+// Browser Support
+
+@mixin transition($transitions...) {
+  transition: $transitions;
+  -webkit-transition: $transitions;
+  -o-transition: $transitions;
+  -moz-transition: $transitions;
+}
+
+@mixin fontSmooth($webkit, $moz) {
+  -webkit-font-smoothing: $webkit;
+  -moz-osx-font-smoothing: $moz;
+}

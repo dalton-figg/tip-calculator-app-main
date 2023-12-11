@@ -1,1 +1,53 @@
 @import "../scss/helpers/base";
+
+.calculator {
+  background: $clr-primary-900;
+  border-radius: toRem(20);
+  height: 600px;
+  margin: 0 auto;
+  padding: toRem(32);
+  text-align: left;
+  @include layout(flex, $justify: space-between);
+  @include maxWidth(1152px);
+}
+
+.calculator__input {
+  padding: toRem(16);
+  @include layout(flex, $direction: column, $justify: space-between);
+}
+
+.calculator__tip-selections {
+  gap: toRem(16);
+  grid-template-columns: repeat(3, 147px);
+  @include layout(grid);
+}
+
+.calculator__results {
+  background: $clr-primary-300;
+  border-radius: toRem(20);
+  height: 535px;
+  padding: toRem(32);
+  @include layout(flex, $direction: column, $justify: space-between);
+  @include maxWidth(544px);
+}
+
+.calculator__results h2 {
+  color: $clr-primary-900;
+}
+
+.calculator__result {
+  @include layout(flex, $align: center);
+}
+
+.calculator__reset {
+  background-color: $clr-primary-600;
+  color: $clr-primary-300;
+  max-width: none;
+  text-transform: uppercase;
+}
+
+.calculator__total {
+  color: $clr-primary-600;
+  font-size: toRem(64);
+  margin-left: auto;
+}
