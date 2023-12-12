@@ -8,6 +8,13 @@
   text-align: center;
   @include appearance-reset;
   @include maxWidth(147px);
+  @include transition(all 0.35s ease);
+
+  &:focus,
+  &:hover {
+    background-color: $clr-primary-700;
+    color: $clr-primary-300;
+  }
 }
 
 %input {

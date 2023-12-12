@@ -1,33 +1,88 @@
+.calculator__tip-selection--custom {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  height: 58px;
+  text-align: center;
+  appearance: none;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  max-width: 147px;
+  width: 100%;
+  transition: all 0.35s ease;
+  -webkit-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+}
+.calculator__tip-selection--custom:focus, .calculator__tip-selection--custom:hover {
+  border: none;
+  outline: none;
+}
+.calculator__tip-selection--custom:focus, .calculator__tip-selection--custom:hover {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+}
+
 .calculator {
   background: hsl(0, 0%, 100%);
   border-radius: 1.25rem;
-  height: 600px;
   margin: 0 auto;
+  gap: 1.5rem;
   padding: 2rem;
+  padding: 1rem;
   text-align: left;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   max-width: 1152px;
   width: 100%;
 }
 
+@media only screen and (min-width: 1024px) {
+  .calculator {
+    gap: 0;
+    flex-direction: row;
+  }
+}
 .calculator__input {
   padding: 1rem;
+  gap: 1.5rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
 
+@media only screen and (min-width: 1024px) {
+  .calculator__input {
+    gap: 0;
+  }
+}
 .calculator__tip-selections {
   gap: 1rem;
-  grid-template-columns: repeat(3, 147px);
+  grid-template-columns: repeat(2, 147px);
   display: grid;
+}
+
+@media only screen and (min-width: 1024px) {
+  .calculator__tip-selections {
+    grid-template-columns: repeat(3, 147px);
+  }
+}
+.calculator__tip-selection--custom {
+  color: white;
+}
+.calculator__tip-selection--custom ::placeholder {
+  color: white;
 }
 
 .calculator__results {
   background: hsl(183, 100%, 15%);
   border-radius: 1.25rem;
-  height: 535px;
+  height: 400px;
   padding: 2rem;
   display: flex;
   justify-content: space-between;
@@ -36,6 +91,11 @@
   width: 100%;
 }
 
+@media only screen and (min-width: 1024px) {
+  .calculator__results {
+    height: 535px;
+  }
+}
 .calculator__results h2 {
   color: hsl(0, 0%, 100%);
 }
@@ -48,7 +108,7 @@
 .calculator__reset {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
-  max-width: none;
+  max-width: 100%;
   text-transform: uppercase;
 }
 
